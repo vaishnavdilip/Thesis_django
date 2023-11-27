@@ -1,13 +1,29 @@
 {% extends 'base.html' %}
-{% block content %}
+{% load static %}
 
-<h1>Welcome to the Recommender System</h1>
-    <form method="post" action="{% url 'recommend' %}">
-        {% csrf_token %}
-        <label for="company">Enter Company Name:</label>
-        <input type="text" id="company" name="company" required>
-        <button type="submit">Get Recommendations</button>
-    </form>
+{% block head_title %}Recommender System{% endblock head_title %}
+
+{% block test %}
+    <link rel="stylesheet" href="{% static 'css/recommend.css' %}">
+{% endblock test %} 
+
+{% block content %}
+<div id="search-home" class="container-fluid search-home bg-white">
+  <div class="row h-100 justify-content-center align-items-center">
+    <div class="col-10 text-center">
+        <div class = "col-10 text-center">
+            <h1>Welcome to the Recommender System</h1>
+            <form method="post" action="{% url 'recommend' %}">
+                {% csrf_token %}
+                <label for="company">Enter Company Name:</label>
+                <input type="text" id="company" name="company" required>
+                <button type="submit">Get Recommendations</button>
+            </form>
+        </div>
+    </div>
+  </div>
+</div>
+
 {% endblock content %}
 
 {% comment %}  <!DOCTYPE html>

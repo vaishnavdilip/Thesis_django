@@ -1,7 +1,7 @@
 from django.shortcuts import render
 
 # Create your views here.
-# from .utils import build_recommender, get_recommendations
+from .utils import recommender, plotter
 # from .models import Rating
 
 def index(request):
@@ -9,12 +9,14 @@ def index(request):
 
 def recommend(request):
     if request.method == 'POST':
-        company = int(request.POST.get('company'))
+        company = str(request.POST.get('company'))
         # model = build_recommender()
         # items_to_recommend = get_recommendations(user_id, model)
         # recommended_items = Rating.objects.filter(item__in=items_to_recommend).values_list('item', flat=True).distinct()
-        recommended_items = ['new', 'very_new']
+        recommended_items = recommender(company,10)['target']
 
-        return render(request, 'recommendation.html', {'company': company, 'recommended_items': recommended_items})
+        fig = plotter(company)
+
+        return render(request, 'recommendation.html', {'company': company, 'recommended_items': recommended_items, 'plot':fig })
 
     return render(request, 'index.html')

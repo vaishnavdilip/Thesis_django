@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'fetch_api',
     'dashboard',
+    'recommender',
     'django_plotly_dash.apps.DjangoPlotlyDashConfig',
 ]
 

@@ -34,18 +34,18 @@
       country: ["Country", false],
       jurisdiction: ["Industry", false],
     },
-    Continent: {
-      continent: ["Continent", true],
-    },
+    // Continent: {
+    //   continent: ["Continent", true],
+    // },
     Country: {
       country: ["Country", true],
     },
     Industry: {
       name: ["Industry", true],
     },
-    Sector: {
-      name: ["Sector", true],
-    },
+    // Sector: {
+    //   name: ["Sector", true],
+    // },
   };
 
   /**
