@@ -1,11 +1,36 @@
-<head>
+{% extends 'base.html'%}
+
+{% block content %}
+<div>
+    <h1>Dashboard</h1>
+    <p> Our dataset consists of the companies in the semiconductor supply chain. The companies are spread over countries. </p>
+    <p> The dashboard below shows the distribution of companies over countries. </p>
+    <div id = 'sector_plot'>
+        {{ sector_plot | safe }}
+    </div>
+    <div id = 'supplier_plot'>
+        {{ supplier_plot | safe }}
+    </div>
+    <div id = 'competes_plot'>
+        {{ competes_plot | safe }}
+    </div>
+    <div id = 'partner_plot'>
+        {{ partner_plot | safe }}
+    </div>
+    <div id = 'country_plot'>
+        {{ country_plot | safe }}
+    </div>
+</div>
+{% endblock content %}
+
+<!-- <head>
     <meta charset="UTF-8">
     <title>Dashboard</title>
     <script src="https://cdn.flexmonster.com/flexmonster.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.flexmonster.com/demo.css">
+    <link rel="stylesheet" href="https://cdn.flexmonster.com/demo.css"> 
 
-    <!-- Custom styles for this template -->
+     Custom styles for this template
     <link href="../../static/css/navbar.css" rel="stylesheet">
 </head>
 
@@ -15,13 +40,5 @@
         <a class = "active" href="/dashboard/">Dashboard</a>
         <a href="/recommender">Recommender System</a>
     </div>
-    <div>
-        <h1>Dashboard</h1>
-        <p>Our dataset consists of the companies in the semiconductor supply chain. The companies are spread over countries. </p>
-    </div>
-
-    {%load plotly_dash%}
-    <main>
-        {% plotly_app name='dash_integration_id' ratio=0.5 %}
-    </main>
-</body>
+ 
+</body> -->
