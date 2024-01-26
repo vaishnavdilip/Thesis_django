@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="{% static 'css/recommend.css' %}">
 {% endblock test %} 
 
+{% block nav-home %}<a href="/">Home</a>{% endblock nav-home %}
+{% block nav-recommender %}<a href = '/recommender/' class = active>Recommender System</a>{% endblock nav-recommender %}
 
 {% block content %}
     <h2>Recommendations for {{ company }}</h2>

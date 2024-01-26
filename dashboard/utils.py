@@ -50,9 +50,9 @@ def competes_year_dist():
     fig = px.bar(a, x='Year', y='count',  height=500, width=700)
 
     fig.update_layout(
-        title='Number of supplier relations per year',
+        title='Number of competitor relations per year',
         xaxis_title='Year',
-        yaxis_title='Number of supplier relations',
+        yaxis_title='Number of competitor relations',
     )
 
     plot_html = pyo.plot(fig, output_type='div')
@@ -67,9 +67,9 @@ def partners_year_dist():
     fig = px.bar(a, x='Year', y='count',  height=500, width=700)
 
     fig.update_layout(
-        title='Number of supplier relations per year',
+        title='Number of partner relations per year',
         xaxis_title='Year',
-        yaxis_title='Number of supplier relations',
+        yaxis_title='Number of partner relations',
     )
 
     plot_html = pyo.plot(fig, output_type='div')

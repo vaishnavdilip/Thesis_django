@@ -31,4 +31,5 @@ urlpatterns = [
     re_path('dashboard/', include('dashboard.urls')),
     re_path('', include('recommender.urls')),
     path('django_plotly_dash/', include('django_plotly_dash.urls')),
+    re_path('link_prediction/', include('link_prediction.urls')),
 ]

@@ -1,9 +1,12 @@
 {% extends 'base.html'%}
 
+{% block nav-home %}<a href="/">Home</a>{% endblock nav-home %}
+{% block nav-dashboard %}<a href = '/dashboard/' class = active>Dashboard</a>{% endblock nav-dashboard %}
+
 {% block content %}
 <div>
     <h1>Dashboard</h1>
-    <p> Our dataset consists of the companies in the semiconductor supply chain. The companies are spread over countries. </p>
+    <p> Our dataset consists of the companies in the semiconductor supply chain. We have 137 unique industries spread over 21 sectors with Finance sector having the most companies. The companies are spread over 209 countries. </p>
     <p> The dashboard below shows the distribution of companies over countries. </p>
     <div id = 'sector_plot'>
         {{ sector_plot | safe }}

@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'dashboard',
     'recommender',
     'django_plotly_dash.apps.DjangoPlotlyDashConfig',
+    'link_prediction'
 ]
 
 MIDDLEWARE = [
